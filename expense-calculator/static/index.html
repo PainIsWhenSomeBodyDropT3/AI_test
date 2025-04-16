@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Calculator</h1>
+        
+        <div class="expense-form">
+            <h2>Add New Expense</h2>
+            <form id="expense-form">
+                <div class="form-group">
+                    <label for="expense-name">Expense Name:</label>
+                    <input type="text" id="expense-name" placeholder="Enter expense name" required>
+                </div>
+                <div class="form-group">
+                    <label for="expense-amount">Amount ($):</label>
+                    <input type="number" id="expense-amount" placeholder="Enter amount" min="0" step="0.01" required>
+                </div>
+                <button type="submit" class="btn">Add Expense</button>
+            </form>
+        </div>
+        
+        <div class="expense-list">
+            <h2>Expense List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Amount ($)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="expense-table">
+                    <!-- Expense items will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="summary">
+            <h2>Summary</h2>
+            <div class="summary-item">
+                <span class="summary-label">Total Expenses:</span>
+                <span id="total-amount">$0.00</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-label">Average Daily Expense:</span>
+                <span id="avg-daily">$0.00</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-label">Top 3 Largest Expenses:</span>
+                <ul id="top-expenses">
+                    <li>No expenses yet</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
